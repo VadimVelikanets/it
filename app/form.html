@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+    <meta charset="utf-8">
+    <!-- <base href="/"> -->
+
+    <title>Главная</title>
+    <meta name="description" content="">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Template Basic Images Start -->
+    <meta property="og:image" content="path/to/image.jpg">
+    <link rel="icon" href="images/favicon/favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/favicon.png">
+    <!-- Template Basic Images End -->
+
+    <!-- Custom Browsers Color Start -->
+    <meta name="theme-color" content="#000">
+    <style>
+        body {
+            opacity: 0;
+            overflow-x: hidden;
+        }
+
+        html {
+            background-color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header id="header">
+        <div class="header__wrapper flex__beetween transition">
+        <div class="logo__header">
+            <a href="./index.html">
+                <img src="images/ITprofit.svg"  class="logo__img" alt="">
+            </a>
+        </div>
+            <div class="navigation flex__beetween">
+                <div class="language flex__beetween">
+                    <button class="language__btn">Ru</button>
+                    <button class="language__btn disabled">En</button>
+                </div>
+                <ul class="menu flex__beetween">
+                    <li><a href="/portfolio.html">Портфолио</a></li>
+                    <li><a href="/services.html">Услуги и цены</a></li>
+                    <li><a href="/about.html">О компании</a></li>
+                    <li><a href="/blog.html">Блог</a></li>
+                    <li><a href="/contact.html">Контакты</a></li>
+                </ul> 
+            </div>
+            
+        </div>
+        
+    
+            <div class="mobile__header">
+                <div class="container">
+                    <div class="mobile__header__wrapper flex__beetween transition">
+                        <a href="./index.html">
+                            <img src="./images/ITprofit.svg" height="24" alt="">
+                        </a>
+                        
+                        <div class="language flex__beetween">
+                            <button class="language__btn">Ru</button>
+                            <button class="language__btn">En</button>
+                        </div>
+
+                        <div class="hamburger">
+                            <img src="./images/line.svg" class="first__line" alt="">
+                            <img src="./images/line.svg" class="second__line" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mobile__menu">
+                <div class="container">
+
+                    <ul class="menu">
+                        <li><a href="./portfolio.html">Портфолио</a></li>
+                        <li><a href="/services.html">Услуги и цены</a></li>
+                        <li><a href="/about.html">О компании</a></li>
+                        <li><a href="/blog.html">Блог</a></li>
+                        <li><a href="/contact.html">Контакты</a></li>
+                    </ul> 
+                    <div class="info__block">
+                        <a href="#"><span>info@seobility.by</span></a> <br>
+                        <a href="#"><span>+375 (44) 550-55-50</span></a>
+                    </div>
+                
+                </div>
+            </div>
+            
+    </header>
+<main>  
+    <section class="form__section">
+        <div class="container">
+            <h1 class="h1">Отправить сообщение</h1>
+            <div class="form__block">
+                <form  action="./ajax.php" method="POST"  class="form">
+                    <input type="text" name='name' required placeholder="Имя">
+                    <input type="text" name='email' required placeholder="Email">
+                    <input type="text" name='phone' class="phone_input" required  placeholder="Телефон">
+                    <input type="text" name='project_name' required  placeholder="Название проекта или компании">
+                    <input type="text" name='request' required  placeholder="Коротко о задаче">
+                    <div class="take__files flex__between">
+                        <div class="download__btn">
+                           <input type="file" class="file_input" > 
+                           <span class="download__btn__custom"><span class="file__name"> + Прикрепить файл</span></span>
+                        </div>
+                        <p class='file__about'>
+                        </p>
+                    </div>
+                    <button type='submit'>Отправить</button>
+                </form>
+            </div>
+        </div>
+        
+    </section>
+</main> 
+<footer>
+    <div class="container">
+        <p>Давайте поговорим</p>
+        <h2 class="h2"><a href="#">info@seobility.by</a></h2>
+        <div class="footer__wrapper flex__beetween">
+            <ul class="networks">
+                <li><a class='transition' href="#">Facebook</a></li>
+                <li><a class='transition' href="#">VK</a></li>
+                <li><a class='transition' href="#">Instagram</a></li>
+            </ul>
+            <div class="addres_data">
+                <p>220013, г. Минск,<br>
+                    ул. Лазо 16, 3 этаж, офис 44 <br>
+                    Seobility &copy All rights reserved</p>
+            </div>
+        </div>
+    </div>
+</footer>
+<link rel="stylesheet" href="css/libs.min.css">
+<link rel="stylesheet" href="css/main.min.css">
+
+<script src="js/scripts.min.js"></script>
+<script src="js/common.js"></script>
+
+</body>
+
+</html>

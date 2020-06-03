@@ -1,0 +1,195 @@
+// Гамбургер меню
+.my_hamburger
+  cursor: pointer
+  display: block
+  width: 24px
+  height: 24px
+  .hamburger_block
+    position: relative
+    height: 100%
+    .hamburger_top
+      top: 6px
+    .hamburger_bottom
+      top: 16px
+  .hamburger_top, .hamburger_bottom
+    position: absolute
+    transition: top .3s cubic-bezier(0.04, 0.04, 0.12, 1) .2999s,transform .1s cubic-bezier(0.04, 0.04, 0.12, 1)
+    width: 24px
+    height: 2px
+    background-color: #4A4A4A
+    border-radius: 2px
+  &.is-active
+    .hamburger_block
+      .hamburger_top, .hamburger_bottom
+        transition: top .3s cubic-bezier(0.04, 0.04, 0.12, 1),transform .1s cubic-bezier(0.04, 0.04, 0.12, 1) .29999s
+      .hamburger_top
+        top: 11px
+        transform: rotate(45deg)
+      .hamburger_bottom
+        top: 11px
+        transform: rotate(-45deg)
+// Конец
+
+// Аккардион
+.acc__container
+  width: 100%
+  .acc__elem
+    width: 100%
+    border-bottom: 1px solid $gray
+    cursor: pointer
+    position: relative
+    height: auto
+    padding-bottom: 0
+    &:before, &:after
+      content: ''
+      position: absolute
+      background-color: #4A4A4A
+      width: 16px
+      height: 1.5px
+      top: 31px
+      right: 20px
+      transition: transform ease-in-out .3s
+    &:after
+      transform: rotate(90deg)
+    .acc__hidden
+      display: flex
+      transition: $all3
+      height: 0
+      overflow: hidden
+      transition: height 0.8s
+    &.animate
+      padding-bottom: 25px
+      &:after
+        transform: rotate(0deg)
+      .acc__hidden
+        height: auto
+// Конец
+
+// Выплывающие блоки
+.fade-up
+  opacity: 0
+  transform: translate(0,80px)
+  transition-property: opacity, transform
+  transition-duration: 1.7s
+  transition-delay: 0s
+  transition-timing-function: cubic-bezier(.19,1,.22,1)
+  &.animate
+    transition-delay: .15s
+    transform: translate(0,0)
+    opacity: 1
+// Конец
+
+// Конец
+// Конец
+
+// Конец
+// Конец
+
+// Конец
+// Конец
+.fade-up
+  opacity: 0
+  transform: translate(0,80px)
+  transition-property: opacity, transform
+  transition-duration: 1.7s
+  transition-delay: 0s
+  transition-timing-function: cubic-bezier(.19,1,.22,1)
+  &.animate
+    transition-delay: .15s
+    transform: translate(0,0)
+    opacity: 1
+.fade-right
+  opacity: 0
+  transform: translate(-100%,0px)
+  transition-property: opacity, transform
+  transition-duration: 1.7s
+  transition-delay: 0s
+  transition-timing-function: cubic-bezier(.19,1,.22,1)
+  &.animate
+    transition-delay: .15s
+    transform: translate(0,0)
+    opacity: 1
+
+
+.btn_new___
+  margin-top: 33px
+  background: #E8F3FF;
+  color: #0066FF;
+  padding: 13px 24px 15px
+  border: none
+  font-weight: bold
+  transition: all 500ms ease; 
+  position: relative
+  width: 289px
+  cursor: pointer
+  overflow: hidden
+  text-align: center
+  &:before
+    content: '';
+    position: absolute;
+    left: -100%;
+    top: 0;
+    display: block;
+    width: 0%;
+    left: auto
+    right: 0
+    height: 100%;
+    background: #0066FF;
+    transition: all 500ms ease; 
+  &:hover
+    transition-delay: 0.1s;
+    color: #fff;
+    z-index: 8;
+    background: none
+    &:before 
+      left: 0;
+      width: 100%
+      transition-duration: 0.5s;
+      z-index: -1
+
+  .mobile__slider
+    display: block
+    .swiper-container
+      height: 550px
+      min-width: 320px
+      width: 100%
+      .portfolio__bg 
+        padding: 0
+        position: relative
+        margin-bottom: 0px
+        .slider__txt
+          position: absolute
+          left: 20px
+          bottom: 20px
+      .portfolio_title
+        font-size: 24px;
+        line-height: 32px;
+      .portfolio_tag
+        font-size: 14px;
+        line-height: 20px;
+
+.portfolio__slider
+  display: none
+.section__slider
+  margin-bottom: 71px
+.slick-track
+  margin-bottom: 11px
+.slick-dots
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .slick-active
+    background: #000000 
+  #slick-slide03
+    width: 8px;
+    height: 8px;  
+  #slick-slide04
+    width: 4px
+    height: 4px
+  li
+    width: 12px;
+    height: 12px;
+    border-radius: 50%
+    background: #E5E5E5;
+    div
+      opacity: 0;

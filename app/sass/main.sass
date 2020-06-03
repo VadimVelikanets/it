@@ -1,0 +1,924 @@
+@import "vars"
+@import "fonts"
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap')
+   
+::placeholder
+  color: #666
+
+::selection
+  background-color: $accent
+  color: #fff
+
+html
+  overflow-x: hidden
+  height: 100%
+body
+  font-size: $default-size
+  min-width: 320px
+  position: relative
+  line-height: 32px
+  font-weight: normal
+  font-family: 'SF Pro Display', sans-serif
+  overflow-x: hidden
+  opacity: 1
+  color: $default-color
+  display: flex;
+  flex-direction: column;
+  max-height: 100vh
+  min-height: 100%
+  justify-content: space-between;
+  select
+    background-color: #fff
+    outline: none
+    appearance: none
+
+  input, textarea, .mob-select
+    background-color: #fff
+    border: #666 1px solid
+    outline: none
+
+  a
+    cursor: pointer
+    color: $default-color
+
+    &:hover
+      color: $default-color
+      text-decoration: none
+b, strong
+  font-weight: bold
+
+ul
+  list-style-type: none
+  margin: 0
+  padding: 0
+
+.flex
+  display: flex
+  align-items: center
+  justify-content: center
+
+.column
+  display: flex
+  flex-direction: column
+
+.flex__start
+  display: flex
+  align-items: flex-start
+  justify-content: flex-start
+
+.flex__beetween
+  display: flex
+  align-items: flex-start
+  justify-content: space-between
+
+.flex__wrap
+  display: flex
+  flex-wrap: wrap
+
+.container
+  padding: 0
+  margin: 0 auto
+  max-width: $max-width
+  width: 100%
+  height: 100%
+.bg__cover
+  background-position: center
+  background-repeat: no-repeat
+  background-size: cover
+
+.bg__contain
+  background-position: center
+  background-repeat: no-repeat
+  background-size: contain
+.transition
+  transition: all .5s ease
+button
+  cursor: pointer 
+  outline: none!important
+.h1, .like__h1
+  font-style: normal;
+  font-weight: bold;
+  font-size: 60px;
+  line-height: 80px;
+  color: #000000;
+  margin-bottom: 30px
+
+.h2, .like__h2
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 60px;
+  margin: 31px 0 32px
+.like__h3
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 40px;
+.like__h4
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 30px;
+
+
+header 
+  position: relative
+  width: 100%
+  background: #fff
+  z-index: 5
+
+.header__wrapper
+  z-index: 5
+  padding: 27px 72px
+  width: 100%
+  margin: 0 auto
+  position: fixed
+  align-items: center
+  .menu
+    font-size: 20px;
+    line-height: 30px
+    color: #000000;
+    max-width: 744px
+    width: 100%
+    font-weight: bold
+    li
+      position: relative
+      &::after
+        position: absolute
+        content: ''
+        height: 3px 
+        width: 0%
+        bottom: -5px
+        left: 0px 
+        background: #000000
+        transition: all .7s ease
+        right: 0
+        left: auto
+      &:hover
+        &::after
+          width: 100%
+          left: 0
+.disabled
+  opacity: 0.5          
+.navigation
+  max-width: 875px
+  width: 100%
+  .language
+    margin: 0 30px
+  .language__btn
+    background: none 
+    border: none
+    margin-right: 30px
+    font-size: 20px
+    .disabled
+    &:hover
+      opacity: 1
+
+.breadcrumbs
+  display: block
+  a 
+    vertical-align: middle
+  img
+    margin-right: 6px
+  span  
+    font-size: 15px;
+    line-height: 30px;
+    font-weight: bold
+.design
+  padding: 352px 0 440px
+  position: relative
+  max-width: 2560px;
+  margin: 0 auto
+  height: 100vh
+  min-height: 850px
+  opacity: 0
+  .hidden
+    overflow: hidden
+  a 
+    div
+      transform: translateY(150%);
+      transition: .7s transform
+      transition-delay: 1s;
+
+  h1
+    transform: translateY(125%);
+    transition: .7s transform
+  .show
+    transform: translateY(0%);
+  p 
+    max-width: 848px;
+    transform: translateY(150%);
+    transition: .7s transform
+    transition-delay: 0.5s;
+  .btn__animated
+    opacity: 0
+  //last changed
+  .info__block
+    position: absolute
+    left: 60px
+    bottom: 40px
+    width: calc(100vw - 220px)
+
+  //end of changed
+  .btn_new
+     transition: all 700ms ease; 
+.btn_new
+  margin-top: 44px
+  background: rgba(0, 102, 255, 0.1);
+  color: $blue
+  padding: 13px 24px 15px
+  border: none
+  font-weight: bold
+  position: relative
+  width: fit-content
+  cursor: pointer
+  overflow: hidden
+  text-align: center
+  &:hover
+    background: $blue;
+    color: #fff;
+  
+
+.mail, .mail__white
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+.mail__white
+  opacity: 0
+.mail
+  opacity: 1
+.mail_box
+  right: 63px;
+  position: fixed;
+  bottom: 44px;
+  background: rgba(0, 102, 255, 0.1);
+  width: 74px;
+  height: 74px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 96px;
+  z-index: 3;
+  z-index: 5
+  &:hover
+      background: $blue;         
+.section__about
+  padding: 30px 0 80px
+.blue__txt
+  color: $blue
+.bold
+  font-weight: bold
+.upper
+  text-transform: uppercase
+.blog_h3
+  margin: 30px 0 19px
+
+.advantages_section
+  padding: 0px 0 23px
+.advantages__wrapper
+  margin-top: 278px
+  width: 100%
+  a
+   width: calc(50% - 30px);  
+   .advantages__item     
+     max-width: 570px
+     padding: 30px 18px 30px 30px;
+     background: rgba(0, 0, 0, 0.03);
+     margin-bottom: 60px
+     &:hover
+      background: rgba(0, 102, 255, 0.1)
+     p
+      margin-top: 20px
+      .gray__txt
+       opacity: 0.4
+.title
+  margin-bottom: 22px
+
+.portfolio__section
+  padding: 0px 0 87px
+
+.portfolio__wrapper, .portfolio__wrapper__slider
+  margin-top: 30px
+.portfolio__item
+  margin-bottom: 30px
+  .portfolio__img, .portfolio__about
+    width: 50%
+  .portfolio__about
+    padding: 30px 0 30px 30px
+  .portfolio__img
+    width: 570px
+    height: 570px
+
+  .portfolio__info
+    margin-bottom: 27px
+.btn__portfolio
+  cursor: pointer
+  width: 100%
+  background: rgba(0, 0, 0, 0.03);
+  padding: 20px 
+.portfolio__name
+  margin-bottom: 28px
+  align-items: center
+  .portfolio__lang
+    margin-left: 30px
+    img 
+      margin-right: 10px
+.portfolio__bg
+  width: 100%
+  height: 100%
+  position: relative
+  
+.blog__section
+  padding-bottom: 57px
+  .blog__item
+    margin-bottom: 60px
+  .blog__img
+    min-height: 490px
+    height: auto
+    width: 100%  
+    margin-bottom: 30px
+  p 
+    margin: 18px 0 0px
+.tags__block
+  a 
+    margin-right: 20px
+.txt__opacity
+  opacity: 0.5
+footer
+  background: #000000;
+  opacity: 0.9
+  padding: 120px 0 120px
+  color: #fff
+  .h2
+    font-size: 50px 
+    line-height: 70px
+  p
+   margin-bottom: 0px
+  a
+   color: #fff
+   &:hover
+    color: #fff 
+  .footer__wrapper
+    margin-top: 35px
+    align-items: flex-end
+
+  .networks
+    li 
+      margin-top: 27px
+      a
+
+       border-bottom: 1px #666666 solid 
+       margin-bottom: 36px
+       &:hover
+        border-bottom: 7px #FFF solid 
+  .addres_data
+    text-align: right
+.hamburger
+ height: 14px;
+ position: absolute
+ right: 20px
+ top: 25px
+ .first__line, .second__line, .second_opened, .first_opened
+  position: absolute;
+  right: 0;
+
+ .first__line	
+	  top: 0
+ .first_opened
+	  top: 4px
+	  transform: rotate(-45deg);
+ .second__line
+	  top: 8px		
+ .second_opened
+	  top: 4px
+	  transform: rotate(45deg);
+
+.mobile__header
+  display: none
+  height: 60px
+  padding: 19px 0 17px
+  .language
+    width: 55px
+    position: absolute
+    left: 50%
+    transform: translateX(-50%)
+  .language__btn
+    border: none
+    background: none
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 20px;
+    color: #000000;
+
+.mobile__menu
+  position: fixed
+  top: 60px
+  width: 100%
+  z-index: 4
+  background: #fff
+  transition: height .3s, opacity 1s
+  height: 0;
+  overflow-y: scroll
+  .container
+    position: fixed
+    overflow-y: scroll
+    height: 0;
+    transition: height .3s
+    &::-webkit-scrollbar
+      width: 0 !important
+      height: 0
+      display: none !important
+      background: transparent
+  ul
+    li
+      a
+        font-size: 24px;
+        line-height: 32px;
+        color: #000000;
+        font-weight: bold
+  .column
+    justify-content: space-between
+  .info__block
+    letter-spacing: 0.02em;
+    padding-bottom: 20px
+  .mail_box
+    z-index: 5
+    position: absolute
+.scroll 
+  right: 0
+
+.get__offer
+  margin-bottom: 120px
+  .get__offer__inner
+    background: rgba(0, 0, 0, 0.03);
+    padding: 30px
+    .h2
+      margin-top: 0
+/*Form page */
+.form__section
+  margin-top: 196px
+.form__block
+  padding: 30px 0 310px
+  input
+    border: none
+    background: #fff
+    border-bottom: 1px #EEEEEE solid
+    font-size: 24px;
+    line-height: 32px;
+    width: 100%
+    margin-bottom: 42px
+    padding: 24px 0 24px  
+    &::placeholder
+     color: #000000;
+     opacity: 0.3
+  button
+    margin-top: 72px
+    border: none
+    background: #fff
+    border-bottom: 1px #EEEEEE solid
+    font-weight: bold;
+    font-size: 56px;
+    line-height: 74px;
+    color: #000000;
+    outline: none
+  .download__btn
+    position: relative
+    margin-top: 72px
+    input[type="file"]
+      position: absolute
+      top: 0
+      opacity: 0  
+      cursor: pointer
+      z-index: 3
+    .download__btn__custom
+      position: absolute
+      top: 0
+      left: 0
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 32px;
+      color: $blue;
+.fade-up
+  opacity: 0
+  transform: translate(0,80px)
+  transition-property: opacity, transform
+  transition-duration: 1.7s
+  transition-delay: 0s
+  transition-timing-function: cubic-bezier(.19,1,.22,1)
+  &.animate
+    transition-delay: .15s
+    transform: translate(0,0)
+    opacity: 1
+
+.mobile__slider
+  display: none
+  .swiper-container 
+    width: 100%;
+    height: 100%;
+//last changed
+.about__inner
+  position: relative
+
+.about__txt
+  display: none
+  position: absolute
+  top: 0
+  padding: 30px
+.parent__txt
+  position: relative
+  min-height: 245px
+  height: 100%
+  background: rgba(0, 0, 0, 0.03);
+#about1
+  display: block
+.about__choose
+  padding-top: 10px
+  display: flex
+  justify-content: flex-start
+  flex-wrap: nowrap
+  overflow-x: scroll
+  &::-webkit-scrollbar
+    width: 0 !important
+    height: 0
+    display: none !important
+    background: transparent
+
+  span
+    white-space:  nowrap
+  span:nth-child(2), span:nth-child(3)
+    margin-right: 30px;
+  a
+    padding: 10px 30px 7px
+    color: #000000;
+    opacity: 0.3
+  .active
+    background: rgba(0, 0, 0, 0.03);
+    opacity: 1
+//end of last changed
+/*Portfolio page*/
+.categories__item
+  color: #000000;
+  p
+    margin-bottom: 0px
+.categories__wrapper
+  margin: 20px 0 5px
+  a 
+    background: rgba(0, 0, 0, 0.03);
+    padding: 15px 25px 
+    margin-bottom: 20px
+    margin-right: 20px
+    position: relative
+    &:active
+     transform: translateY(3px);
+     transition-duration: 0.175s;
+
+  .active 
+    background: rgba(0, 0, 0, 0.1);
+
+.blog-page, .services-page, .about-page, .contact-page
+  main
+    padding-bottom: 37px
+    min-height: calc(100vh - 577px)
+.services-page 
+  .advantages__wrapper
+    margin-top: 30px
+.portfolio__page, .services-page main, .blog-page main, .about-page main, .contact-page main
+  padding-top: 118px
+  .portfolio__section
+    padding: 0px 0 60px
+    .portfolio__item
+      margin-bottom: 60px
+.blog-page
+  .blog__section
+    margin-top: 40px
+//Blocks
+.blocks
+  padding: 120px 0 240px
+  max-width: 2560px
+  width: 100%
+  margin: 0 auto
+.block__item
+  margin: 120px auto 0
+  .block__img
+    width: 100%
+    margin-bottom: 30px
+
+    img
+      width: 100%
+      height: 100%
+  .block__txt
+    background: rgba(0, 0, 0, 0.03);
+    padding: 20px
+  .block__wrapper
+    a, .block__txt
+      width: calc(50% - 30px)
+    
+.block1, .block2, .block6
+  .block__img
+    height: 800px
+.block3, .block4, .block5
+  .block__img
+    height: 570px
+//Portfolio inner
+//changed
+.head__bg
+  max-height: 942px
+  margin-bottom: 30px
+  height: 100vh
+  .header__wrapper 
+   align-items: baseline
+
+  main
+    min-height: calc(100vh - 1525px)
+    padding: 0  0 60px
+  .info__block
+    padding: 30px 0 0px
+
+  .portfolio-info__wrapper
+    margin-bottom: 10px
+    margin-top: 30px
+  .btn__portfolio
+    margin-bottom: 56px
+  .portfolio__info
+    width: calc(50% - 30px)
+  .info__txt
+    margin-bottom: 60px
+.gray__txt
+  color: #000000;
+  opacity: 0.3;
+//Services page
+.services-page
+
+.popular__tags
+  margin-top: 27px
+  padding: 30px
+  background: rgba(0, 0, 0, 0.03);  
+  .h2
+    margin-top: 0
+
+//Websites-page
+.websites-page
+  main 
+   padding-top: 120px
+   .advantages_section
+    .advantages__wrapper
+     margin-top: 120px
+     p 
+      margin-bottom: 0
+     .advantages__item
+      margin-bottom: 30px
+  .websites-head__txt
+    max-width: 570px
+    width: 100%
+  .websites-head__images
+    max-width: 400px
+    div
+      width: calc(50% - 15px)
+  .websites-info__wrapper
+    margin-top: 75px
+    div
+      width: calc(33% - 30px)
+  .websites-info__item
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 30px;
+    padding: 15px 25px
+    border: 2px solid #000000;
+    width: auto
+  .tags__section
+    margin-bottom: 120px
+  //changed
+  .btn__wrapper
+    .btn_all
+      margin-top: 14px
+      width: auto
+      margin-right: 30px
+  .stages__section
+    padding-bottom: 90px
+    .websites-info__item
+      max-width: 116px
+      margin-bottom: 20px
+      font-size: 20px
+    p 
+      margin: 18px 0 0
+    a 
+     img
+      margin: 60px 0
+  .logotypes__wrapper
+    padding: 120px 0 0
+    a 
+      width: 25% 
+.btn_next
+  padding: 15px 55px 15px 25px
+  background: rgba(0, 0, 0, 0.03);
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 30px
+  position: relative
+  max-width: 278px
+  margin-top: 70px
+  &:hover
+   background: rgba(0, 0, 0, 0.1); 
+  &:active
+    transform: translateY(3px);
+    transition-duration: 0.175s;
+  img
+    position: absolute
+    right: 15px
+    top: 50%
+    transform: translateY(-50%)
+.offer__block
+  .btn_new
+    min-width: 285px
+//blog-inner page
+
+.seo__about
+  padding: 60px 0 120px
+  .txt__opacity
+   margin-bottom: 60px
+
+.blog__about__img
+  width: 100%
+  height: auto
+  margin: 60px 0
+.next__block
+  padding: 90px 0 120px
+  //last changed
+  .btn_new
+    margin-right: 30px
+//about us page
+.about-page
+  main
+    padding-bottom: 118px
+  .about__section
+   padding-bottom: 73px
+  .categories__section
+    padding-bottom: 0px
+  section
+    padding-bottom: 90px
+  .tags__section
+    padding-bottom: 0
+.leaders__wrapper
+  margin-top: 30px
+  width: 100%
+  .leaders__item 
+    width: calc(50% - 30px)
+    background: rgba(0, 0, 0, 0.03);
+    padding: 65px 30px
+    margin-bottom: 30px
+    height: 220px
+    align-items: center
+    .leaders__img
+      margin-right: 30px
+.btn_all
+  background: rgba(0, 0, 0, 0.03);
+  padding: 15px 25px
+  width: fit-content
+  margin-top: 40px
+  &:hover
+   background: rgba(0, 0, 0, 0.1); 
+  &:active
+    transform: translateY(3px);
+    transition-duration: 0.175s;
+.clients__wrapper
+  margin-bottom: 10px
+  a 
+    width: 300px  
+    height: 135px
+    line-height: 135px
+.tech__item 
+  width: calc(50% - 30px)
+  margin-top: 30px
+  position: relative
+  .tech__inner
+    background: rgba(0, 0, 0, 0.03);
+    padding: 30px
+  .like__h4
+    margin-bottom: 20px
+  .tech__images
+    margin-top: 20px
+    img
+      margin-right: 22px
+.about__tabs__item
+  display: none
+#about-us__block
+  display: block
+.work__inner
+  margin-bottom: 30px
+.work__item
+  padding: 30px
+  background: rgba(0, 0, 0, 0.03);
+  margin-bottom: 30px
+  .work__item__title
+    margin-bottom: 20px
+    align-items: center
+    .work__item__number
+      background: #000000;
+      color: #fff
+      padding: 0 12px 
+      margin-right: 20px
+.btn__show
+  padding: 15px 25px
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  color: rgba(0, 0, 0, 0.5);
+  margin-top: 20px
+  width: fit-content
+  &:hover
+    background: rgba(0, 0, 0, 0.1);
+//start change
+.tech__icon
+  cursor: pointer
+.tech__hidden
+  display: none
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  z-index: 2
+  background: rgba(247,247,247,1)
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 30px
+//end change
+  .like__h3
+   margin-top: 20px
+.modal__close
+  position: absolute
+  top: 30px 
+  right: 30px
+//Contact page
+.contact__wrapper
+  margin-top: 60px
+.contact__inner
+  .container
+   position: relative
+   min-height: 975px
+.contact__info
+
+  .btn_new
+    position: relative
+    padding-left: 57px
+    margin-top: 25px
+    .map__blue
+      position: absolute
+      left: 24px
+      top: 18px
+    .map__white
+      position: absolute
+      opacity: 0
+      left: 24px
+      top: 18px  
+.contact__call
+  margin-bottom: 30px
+  a   
+    margin-right: 20px
+.contact__email
+  color: $blue
+  &:hover
+    color: $blue
+.soc__networks
+  margin: 30px 0 60px
+  img
+    margin-right: 20px
+.network__item
+  margin-right: 60px
+.link__btn
+  color: $blue
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 40px;  
+  position: absolute
+  bottom: 110px
+  left: 0px
+  &:hover
+    color: $blue
+.modal__map
+  display: none
+  max-width: 1200px
+  position: fixed
+  left: 0 
+  right: 0 
+  margin: auto
+  z-index: 7
+  top: 50%
+  transform: translateY(-50%)
+  opacity: 0
+  height: 730px
+.popup__container
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,.5);
+  z-index: 6;
+  display: none
+  opacity: 0
+.contact__img
+  max-width: 740px
+  width: 65%
+  img
+    width: 100%
+    height: auto
+.contact__img__mobile
+  display: none
+@import "media"
+// Always at the end
+
+
